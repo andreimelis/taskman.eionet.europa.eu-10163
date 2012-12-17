@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="OFF">
+	<appenders>
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout pattern="%-5level %msg%n" />
+		</Console>
+	</appenders>
+	<loggers>
+		<logger name="taskman" level="TRACE">
+			<appender-ref ref="Console" />
+		</logger>
+		<root level="trace">
+			<appender-ref ref="Console" />
+		</root>
+	</loggers>
+</configuration>
