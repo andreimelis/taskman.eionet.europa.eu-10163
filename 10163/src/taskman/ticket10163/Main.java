@@ -138,6 +138,11 @@ public class Main {
 				attrMap.put(attr, value);
 			}
 		}
+		// write the last entry
+		if ( currentDN != null ) {
+			replaceOrDelete(attrMap, ATTR_PHONE, currentDN);
+			replaceOrDelete(attrMap, ATTR_FAX, currentDN);
+		}
 		rs.close();
 		conn.close();
 		writerValid.close();
